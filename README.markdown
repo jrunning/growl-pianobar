@@ -8,7 +8,7 @@
 
 ## Installation
 
-1. Create a file called config in ~/.config/pianobar/
+1. Create a file called `config` in `~/.config/pianobar/`
 2. Open the file in your favorite text editor and insert the text:
 
 	`event_command = path/to/growl.sh`
