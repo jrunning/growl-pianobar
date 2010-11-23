@@ -15,7 +15,8 @@ case "$1" in
 		else
 			heart=""
 		fi
-		if [ ! -d ~/.config/pianobar/art ]
+		if [ ! -d ~/.config/pianobar/art ] 
+		then
 			mkdir ~/.config/pianobar/art
 		fi
 		cd ~/.config/pianobar/art
