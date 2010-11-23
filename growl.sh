@@ -16,7 +16,7 @@ case "$1" in
 			heart=""
 		fi
 		cd ~/.config/pianobar/art
-		rm *
+		rm * > /dev/null
 		wget -q "$coverArt"
 		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify --image * -d 12 pianobar
 	;;
