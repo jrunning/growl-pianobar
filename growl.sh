@@ -20,7 +20,7 @@ case "$1" in
 			mkdir ~/.config/pianobar/art
 		fi
 		cd ~/.config/pianobar/art
-		rm * > /dev/null
+		rm * 2> /dev/null
 		wget -q "$coverArt"
 		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify --image * -d 12 pianobar
 	;;
