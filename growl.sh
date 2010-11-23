@@ -5,7 +5,7 @@ while read L; do
 	k="`echo "$L" | cut -d '=' -f 1`"
 	v="`echo "$L" | cut -d '=' -f 2`"
 	export "$k=$v"
-done < <(grep -e '^\(title\|artist\|album\|stationName\|pRet\|pRetStr\|wRet\|wRetStr\|songDuration\|songPlayed\|rating\)=' /dev/stdin)
+done < <(grep -e '^\(title\|artist\|album\|stationName\|pRet\|pRetStr\|wRet\|wRetStr\|songDuration\|songPlayed\|rating\|coverArt\)=' /dev/stdin)
 
 case "$1" in
 	songstart)
@@ -15,7 +15,10 @@ case "$1" in
 		else
 			heart=""
 		fi
-		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify -d 12 pianobar
+		cd ~/.config/pianobar/art
+		rm *
+		wget -q "$coverArt"
+		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify --image * -d 12 pianobar
 	;;
 esac
 
