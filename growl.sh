@@ -15,7 +15,7 @@ case "$1" in
 		else
 			heart=""
 		fi
-		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify pianobar
+		echo "\"$title\" by \"$artist\" on \"$album\" $heart" | growlnotify -d 12 pianobar
 	;;
 esac
 
