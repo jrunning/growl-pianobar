@@ -8,12 +8,9 @@
 
 ## Installation
 
-1. Create a file called `config` in `~/.config/pianobar/`
-2. Open the file in your favorite text editor and insert the text:
+Simply run the installation script with this command:
 
-	`event_command = path/to/growl.sh`
-
-Where `path/to/growl.sh` is the location of the `growl.sh` file.
+	./install.sh
 
 Now when you run pianobar and the song changes, you should be notified via growl of the current song.
 
