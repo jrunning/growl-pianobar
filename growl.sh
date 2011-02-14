@@ -8,7 +8,7 @@ while read L; do
 done < <(grep -e '^\(title\|artist\|album\|stationName\|pRet\|pRetStr\|wRet\|wRetStr\|songDuration\|songPlayed\|rating\|coverArt\)=' /dev/stdin)
 
 DIR=$(cd `dirname $0` && pwd) # Where this script lives
-iconPath="$DIR/pandora-icon-cc-by-rossr.png"
+iconPath="$DIR/pandora-icon-cc-by-sa-rossr.png"
 
 case "$1" in
 	# React when the song changes
